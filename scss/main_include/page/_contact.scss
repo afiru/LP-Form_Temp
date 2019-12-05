@@ -1,0 +1,84 @@
+@charset "utf-8";
+@import '../../sass_base/mixin';
+@import '../../sass_base/animate';
+@import '../../sass_base/icon_arrow';
+
+.form_contents_table {
+    width: 100%;
+    td,th {
+        @include rs_font_size(16px,1.5625vw,3.7333333333333334vw);
+        //フォント（px）【PC】:16pxpx |【Tab】16px |【sp】 14px
+        //設定サイズ（px）【PC】:1024px |【Tab】1024px |【sp】 375px
+        
+        text-align: left;
+    }
+    th {
+        @include ontener_width(960 , 240 );
+        text-align: left;
+        vertical-align: top;
+        @include paddingPercent(960 , 20 , 10 , 20 , 10 );
+        @include outer-container(100%);
+        .title {
+            float: left;
+        }
+        .hissu {
+            float: right;
+            @include paddingPercent(960 , 10 , 30 , 10 , 30 );
+            background: #FF0000;
+            color: #FFF;
+        }
+    }
+    td {
+        @include ontener_width(960 , 720 );
+        @include paddingPercent(960 , 10 , 10 , 10 , 10 );
+    }
+    input,textarea {
+        @include paddingPercent(960 , 10 , 10 , 10 , 10 );
+        @include rs_font_size(16px,1.5625vw,3.7333333333333334vw);
+        //フォント（px）【PC】:16pxpx |【Tab】16px |【sp】 14px
+        //設定サイズ（px）【PC】:1024px |【Tab】1024px |【sp】 375px
+        border: 1px solid #666;
+        width: 100%;
+    }
+    textarea {
+        height: 150px;
+    }
+}
+
+.form_contents_read_privacypolicy {
+    line-height: 1.25;
+    @include paddingPercent(960 , 10 , 10 , 10 , 10 );
+    @include rs_font_size(14px,1.3671875vw,3.2vw);
+    //フォント（px）【PC】:14pxpx |【Tab】14px |【sp】 12px
+    //設定サイズ（px）【PC】:1024px |【Tab】1024px |【sp】 375px
+    height: 200px;
+    overflow: auto;
+    border: 1px solid #333;
+    &::-webkit-scrollbar{
+        width: 10px;
+    }
+    &::-webkit-scrollbar-track{
+        background: #fff;
+        border-left: solid 1px #ececec;
+    }
+    &::-webkit-scrollbar-thumb{
+        background: #ccc;
+        border-radius: 10px;
+        box-shadow: inset 0 0 0 2px #fff;
+    }
+}
+
+.form_submit_button {
+    @include ontener_width(960 , 420);
+    input {
+        @include buttontype14(#006e86,#006e86,2px,#FFF,#FFF,#006e86,#006e86); display:block;
+        text-align: center;
+        width: 100%;
+        font-weight: 600;
+        letter-spacing: 0.25em;
+        @include paddingPercent(960 , 20 , 0 , 20 , 0 );
+        @include rs_font_size(20px,1.953125vw,4.8vw);
+        //フォント（px）【PC】:20pxpx |【Tab】20px |【sp】 18px
+        //設定サイズ（px）【PC】:1024px |【Tab】1024px |【sp】 375px
+    }
+}

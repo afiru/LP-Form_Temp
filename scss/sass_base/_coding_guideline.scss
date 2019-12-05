@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+@keyframes cloak-in {
+  0% {
+    opacity: 0;
+    margin-top:-10px;
+  }
+  100% {
+     opacity: 1;
+     margin-top:0;
+  }
+}
+#page_top {
+  animation: cloak-in 0.75s;
+}
+#page_top[v-cloak] {
+  opacity: 0;
+}
+body {
+    -webkit-font-smoothing: antialiased;
+}
+
+.test {
+    background: url("#{$imgpass}/back");
+}
+
+.display_flex_center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.display_flex_stretch {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.display_row {
+    flex-flow: row wrap;
+}
+body {
+    font-family: 'Noto Sans JP',sans-serif;
+    visibility: hidden;
+    @include imgwidth();
+    @include rs_font_size();
+}
+.wf-active body {
+    visibility: visible;
+}
+#mintyou,.mintyou {
+    font-family:"Noto Serif JP",serif;
+    visibility: hidden;
+}
+.montserrat {
+    font-family: 'Montserrat', sans-serif;
+    visibility: hidden;
+}
+.wf-active {
+	#mintyou,.mintyou {
+	    visibility: visible;
+	}
+	.montserrat {
+	visibility: visible;
+	}
+}
